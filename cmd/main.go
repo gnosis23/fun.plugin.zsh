@@ -4,9 +4,16 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"time"
 
 	"github.com/fatih/color"
 )
+
+func saveCompletionTime() {
+	// write to /tmp/fun_completion.txt
+	completionTime := time.Now()
+	os.WriteFile("/tmp/fun_completion.txt", []byte(completionTime.Format(time.DateTime)), 0644)
+}
 
 func main() {
 	// print ascii "fun"
@@ -19,10 +26,12 @@ func main() {
 	if len(os.Args) > 1 {
 		input = os.Args[1]
 	}
-	input = strings.ReplaceAll(input, ";", "\n")
+	input = strings.ReplaceAll(input, ";", "")
 
 	fmt.Println("")
 	color.Cyan(greetingMessage)
-	color.Green(input)
+	fmt.Printf("args[1]: '%s'\n", input)
 	fmt.Println("")
+
+	saveCompletionTime()
 }

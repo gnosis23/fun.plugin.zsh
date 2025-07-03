@@ -16,9 +16,10 @@ function _do_echo_fun() {
     # Run the binary
     "$binary_path" "$input"
     
-    # clear input
-    BUFFER=""
-    CURSOR=0
+    # Replace the input with the completion time
+    local completion_time=$(cat /tmp/fun_completion.txt)
+    BUFFER="${completion_time}"
+    CURSOR=$#BUFFER
     zle reset-prompt
 }
 
