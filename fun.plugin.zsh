@@ -10,8 +10,15 @@ function _do_echo_fun() {
         return 1
     fi
 
+    # Get user input
+    local input=$(echo "${BUFFER:0:$CURSOR}" | tr '\n' ';')
+
     # Run the binary
-    "$binary_path"
+    "$binary_path" "$input"
+    
+    # clear input
+    BUFFER=""
+    CURSOR=0
     zle reset-prompt
 }
 

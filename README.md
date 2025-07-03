@@ -32,7 +32,7 @@ source ~/.zshrc
 
 ### FUN_MESSAGE
 ```bash
-export FUN_MESSAGE="too young"
+export FUN_GREETING_MESSAGE="hello"
 ```
 
 ## Usage
