@@ -28,6 +28,13 @@ Reload
 source ~/.zshrc
 ```
 
+## Configuration
+
+### FUN_MESSAGE
+```bash
+export FUN_MESSAGE="too young"
+```
+
 ## Usage
 
 - Typing `ctrl+o` in zsh. 😆
