@@ -2,13 +2,16 @@
 
 # Fun ASCII art function
 function _do_echo_fun() {
-    echo "                                    "
-    echo " ███████ ██    ██ ███    ██         "
-    echo " ██      ██    ██ ████   ██         "
-    echo " █████   ██    ██ ██ ██  ██         "
-    echo " ██      ██    ██ ██  ██ ██         "
-    echo " ██       ██████  ██   ████         "
-    echo "                                    "
+    local binary_path="$HOME/.config/fun-plugin-zsh/fun-bin"
+    
+    # Check if the binary exists
+    if [[ ! -f "$binary_path" ]]; then
+        echo "fun binary not found at $binary_path. Please run ./build.sh to build it." > /tmp/.fun_error
+        return 1
+    fi
+
+    # Run the binary
+    "$binary_path"
     zle reset-prompt
 }
 

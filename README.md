@@ -1,6 +1,6 @@
 # fun.plugin.zsh
 
-a demo zsh plugin.
+a demo zsh plugin
 
 ## Installation
 
@@ -14,6 +14,18 @@ Add `fun` to your `~/.zshrc` file:
 
 ```bash
 plugins=(git bundler fun)
+```
+
+Install
+
+```bash
+bash ./install.sh
+```
+
+Reload
+
+```bash
+source ~/.zshrc
 ```
 
 ## Usage
