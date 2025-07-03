@@ -18,4 +18,4 @@ plugins=(git bundler fun)
 
 ## Usage
 
-- Typing `fun` in zsh. 😆
+- Typing `ctrl+o` in zsh. 😆
