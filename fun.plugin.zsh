@@ -30,4 +30,4 @@ function _do_echo_fun() {
 # 一旦注册成功，你就可以通过 bindkey 命令，让用户按下一个快捷键（如 Ctrl+O）时，
 # 直接执行这个复杂的、自定义的动作。
 zle -N _do_echo_fun
-bindkey '^o' _do_echo_fun
+bindkey '^i' _do_echo_fun

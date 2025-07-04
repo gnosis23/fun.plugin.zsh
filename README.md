@@ -37,4 +37,4 @@ export FUN_GREETING_MESSAGE="hello"
 
 ## Usage
 
-- Typing `ctrl+o` in zsh. 😆
+- Typing `ctrl+i` in zsh. 😆
