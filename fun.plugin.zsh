@@ -17,8 +17,9 @@ function _do_echo_fun() {
     "$binary_path" "$input"
     
     # Replace the input with the completion time
-    local completion_time=$(cat /tmp/fun_completion.txt)
-    BUFFER="${completion_time}"
+    # local completion_time=$(cat /tmp/fun_completion.txt)
+    # BUFFER="${completion_time}"
+    BUFFER=""
     CURSOR=$#BUFFER
     zle reset-prompt
 }
@@ -30,4 +31,4 @@ function _do_echo_fun() {
 # 一旦注册成功，你就可以通过 bindkey 命令，让用户按下一个快捷键（如 Ctrl+O）时，
 # 直接执行这个复杂的、自定义的动作。
 zle -N _do_echo_fun
-bindkey '^i' _do_echo_fun
+bindkey '^]' _do_echo_fun

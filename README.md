@@ -31,10 +31,22 @@ source ~/.zshrc
 ## Configuration
 
 ### FUN_MESSAGE
+
+change greeting message
+
 ```bash
 export FUN_GREETING_MESSAGE="hello"
 ```
 
+### Pre-Hooks
+
+run before every command
+
+```bash
+# add to .zshrc
+source $ZSH_CUSTOM/plugins/fun/fun.hooks.zsh
+```
+
 ## Usage
 
-- Typing `ctrl+i` in zsh. 😆
+- Typing `ctrl+]` in zsh. 😆
